@@ -1,0 +1,137 @@
+// Media query breakpoints
+@screen-phone:               640px;
+@screen-tablet:              1024px;
+@screen-desktop:             1360px;
+@screen-retina:              1600px;
+
+  //=>
+  @screen-phone-max:           (@screen-phone - 1px);
+  @screen-tablet-max:          (@screen-tablet - 1px);
+  @screen-desktop-max:         (@screen-desktop - 1px);
+  @screen-retina-max:          (@screen-retina - 1px);
+
+  @screen-breakpoint:          @screen-phone;
+  @screen-breakpoint-max:      (@screen-breakpoint - 1px);
+
+
+// Metrics
+@rem:                        14px;
+@gutter:                     2em;
+@reading-width:              40rem; // (60 - (2 * @gutter));
+@grid-gutter:                3rem;
+@grid-gutter-in-px:          (unit(@grid-gutter) * @rem);
+@grid-columns:               12;
+
+@container-desktop:          (@screen-desktop - 2 * @rem);
+
+@padding-v-small:            .2rem;
+@padding-h-small:            .25rem;
+@padding-v:                  .4rem;
+@padding-h:                  .5rem;
+@padding-v-large:            .6rem;
+@padding-h-large:            .8rem;
+@padding-v-huge:             1rem;
+@padding-h-huge:             1.4rem;
+
+@width-11:                   (11 / 12 * 100%);
+@width-10:                   (10 / 12 * 100%);
+@width-9:                    (9 / 12 * 100%);
+@width-8:                    (8 / 12 * 100%);
+@width-7:                    (7 / 12 * 100%);
+@width-6:                    (6 / 12 * 100%);
+@width-5:                    (5 / 12 * 100%);
+@width-4:                    (4 / 12 * 100%);
+@width-3:                    (3 / 12 * 100%);
+@width-2:                    (2 / 12 * 100%);
+@width-1:                    (1 / 12 * 100%);
+
+  //=>
+  @padding-small:              @padding-v-small @padding-h-small;
+  @padding:                    @padding-v @padding-h;
+  @padding-large:              @padding-v-large @padding-h-large;
+  @padding-huge:               @padding-v-huge @padding-h-huge;
+
+@radius-small:        .15em;
+@radius:              .25em;
+@radius-large:        .5em;
+
+@navmenu-topics-width: 13rem;
+
+// Layer
+@z-navbar:                   100;
+@z-dropdowns:                200;
+
+
+// Swatches
+@color-yellow:               #f9de69; // #f4ce62;
+@color-orange:               #f8a704;
+@color-red:                  #df2047;
+@color-green:                #f15a24;
+@color-purple:               #5b07a5; // #6B06E8;
+
+@color-blue:                 #034ea2;
+@color-lightblue:            #4E8AC9;
+@color-darkyellow:           #f5b400;
+@color-green:                #52a43b;
+
+@color-dominant:             @color-blue; // ECSM dark blue
+@color-secondary:            @color-lightblue; // ECSM light blue
+@color-accent:               #FAEA69; // ECSM yellow
+
+// @color-dominant-text:        #B50709;
+// @color-dominant-darker:      multiply(@color-dominant, @color-dominant, 40%);
+
+@color-darker:               rgba(0,0,0,.4);
+@color-lighter:              rgba(255,255,255,.2);
+@color-soft:                 #d8d8d8;
+@color-soft-fill:            #f2f2f2;
+@color-medium:               #ccc;
+@color-hard:                 #999999;
+
+@hr-color:                   @color-soft;
+
+
+// Typography
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic&subset=latin,latin-ext);
+@font-path:                  "../fonts/";
+@font-family-sans-serif:     "Roboto", sans-serif;
+@font-family-serif:          serif;
+@font-family-monospace:      monospace;
+@larger:                     (16 / unit(@rem) * 100%);
+@smaller:                    (12 / unit(@rem) * 100%);
+  
+  // =>
+  @font-family:                @font-family-sans-serif;
+
+@font-size-h1:               2rem;
+@font-size-h2:               1.8rem;
+@font-size-h3:               1.6rem;
+@font-size-h4:               1.4rem;
+@font-size-h5:               2rem;
+@font-size-h6:               2rem;
+
+@color-body:                 #333;
+@color-muted:                #999;
+@color-emphasis:             #000;
+
+@color-anchor:               #034ea2;
+@color-anchor-hover:         #1679d3;
+@color-anchor-visited:       #845299;
+
+@body-bg:                    transparent;
+@line-height-body:           1.4;
+@line-height-heading:        1.2;
+@leading:                    1rem;
+@indent:                     2rem;
+@indent-media:               8rem;
+
+  // =>
+  @line-height-rem:            (1rem * @line-height-body);
+
+
+// Navbar
+@navbar-retina-width:        16rem;
+
+
+// Buttons
+@btn-font-weight:            normal;

@@ -1,0 +1,57 @@
+.btn {
+  display: inline-block;
+  padding: @padding;
+  border: 0 solid transparent;
+  border-radius: @radius;
+  font-weight: 500;
+}
+
+.btn-variant(@color, @bg) {
+  color: @color;
+  text-shadow: 0 -1px 0 @bg;
+  box-shadow: 0 1px 3px @color-darker;
+  background-color: @bg;
+  transition: box-shadow 100ms ease-out;
+
+  &:hover,
+  &:focus {
+    color: @color;
+    box-shadow: 0 0 .2rem @color-darker;
+  }
+  &:visited {
+    color: @color;
+  }
+  &:active {
+    box-shadow: none;
+  }
+  &.disabled,
+  &[disabled] {
+    cursor: default;
+    color: fade(@color, 50%);
+    text-shadow: none;
+    background-image: none;
+    box-shadow: none;
+  }
+}
+
+.btn-white {
+  .btn-variant(@color-emphasis, white);
+}
+
+.btn-yellow {
+  .btn-variant(@color-emphasis, @color-yellow);
+}
+
+.btn-green {
+  .btn-variant(white, @color-green);
+}
+
+.btn-fake {
+  color: inherit;
+  background: none;
+  &
+  &.disabled,
+  &[disabled] {
+    opacity: .5;
+  }
+}

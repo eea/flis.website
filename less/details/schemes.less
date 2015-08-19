@@ -1,0 +1,47 @@
+.scheme(@bg, @color) {
+  // .site-header {
+  //   color: @color;
+  //   background-color: darken(@bg, 10%);
+  // }
+  .sidebar-menu {
+    .is_selected {
+      color: @color;
+      background-color: @bg;
+    }
+  }
+  #navmenu {
+    @media (max-width: @screen-phone) {
+      border-bottom-color: @bg;
+    }
+  }
+  .section-header {
+    color: @color;
+    background-color: @bg;
+    a {
+      color: inherit;
+    }
+  }
+  .section-title {
+    color: inherit;
+  }
+}
+
+.scheme-purple {
+  .scheme(@color-purple, #fff);
+}
+
+.scheme-yellow {
+  .scheme(@color-yellow, @color-emphasis);
+}
+
+.scheme-orange {
+  .scheme(@color-orange, #fff);
+}
+
+.scheme-red {
+  .scheme(@color-red, #fff);
+}
+
+.scheme-green {
+  .scheme(@color-green, #fff);
+}

@@ -1,0 +1,29 @@
+*, 
+*:before, 
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow: auto;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: (@grid-gutter / 2);
+  padding-right: (@grid-gutter / 2);
+  max-width: 80rem;
+}
+
+.row {
+  .row();
+}

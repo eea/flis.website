@@ -1,0 +1,61 @@
+.row(@gutter: @grid-gutter) {
+  .clearfix();
+  margin-left: (-@gutter / 2);
+  margin-right: (-@gutter / 2);
+}
+
+.col(@width: 100%, @gutter: @grid-gutter) {
+  float: left;
+  width: @width;
+  padding-left: (@gutter / 2);
+  padding-right: (@gutter / 2);
+}
+
+.column {
+  .col();
+}
+
+@media (min-width: @screen-phone) {
+  .phone-1 { width: (1 / 12 * 100%); }
+  .phone-2 { width: (2 / 12 * 100%); }
+  .phone-3 { width: (3 / 12 * 100%); }
+  .phone-4 { width: (4 / 12 * 100%); }
+  .phone-5 { width: (5 / 12 * 100%); }
+  .phone-6 { width: (6 / 12 * 100%); }
+  .phone-7 { width: (7 / 12 * 100%); }
+  .phone-8 { width: (8 / 12 * 100%); }
+  .phone-9 { width: (9 / 12 * 100%); }
+  .phone-10 { width: (10 / 12 * 100%); }
+  .phone-11 { width: (11 / 12 * 100%); }
+  .phone-12 { width: 100%; }
+}
+
+@media (min-width: @screen-tablet) {
+  .tablet-1 { width: (1 / 12 * 100%); }
+  .tablet-2 { width: (2 / 12 * 100%); }
+  .tablet-3 { width: (3 / 12 * 100%); }
+  .tablet-4 { width: (4 / 12 * 100%); }
+  .tablet-5 { width: (5 / 12 * 100%); }
+  .tablet-6 { width: (6 / 12 * 100%); }
+  .tablet-7 { width: (7 / 12 * 100%); }
+  .tablet-8 { width: (8 / 12 * 100%); }
+  .tablet-9 { width: (9 / 12 * 100%); }
+  .tablet-10 { width: (10 / 12 * 100%); }
+  .tablet-11 { width: (11 / 12 * 100%); }
+  .tablet-12 { width: 100%; }
+}
+
+@media (min-width: @screen-desktop) {
+  .desktop-1 { width: (1 / 12 * 100%); }
+  .desktop-2 { width: (2 / 12 * 100%); }
+  .desktop-3 { width: (3 / 12 * 100%); }
+  .desktop-4 { width: (4 / 12 * 100%); }
+  .desktop-5 { width: (5 / 12 * 100%); }
+  .desktop-6 { width: (6 / 12 * 100%); }
+  .desktop-7 { width: (7 / 12 * 100%); }
+  .desktop-8 { width: (8 / 12 * 100%); }
+  .desktop-9 { width: (9 / 12 * 100%); }
+  .desktop-10 { width: (10 / 12 * 100%); }
+  .desktop-11 { width: (11 / 12 * 100%); }
+  .desktop-12 { width: 100%; }
+}

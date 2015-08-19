@@ -1,0 +1,16 @@
+---
+layout: default
+title: FLIS Terms and Definitions
+subtitle: A glossary of main terms in the foresight field, co-created by the FLIS community
+scheme: yellow
+---
+
+<h1>All Terms</h1>
+
+<ul>
+  {% for term in site.data.terms %}
+  <li>
+    <a href="">{{ term.name }}</a>
+  </li>
+  {% endfor %}
+</ul>

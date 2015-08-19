@@ -1,0 +1,31 @@
+---
+layout: sidebar
+bodyLayout: sidebar
+title: Reports
+scheme: purple
+---
+
+<h1>Trends and Megatrends</h1>
+
+<table class="dataTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Steep</th>
+      <th>Impacts</th>
+      <th>Indicators</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for trend in site.data.trends %}
+    <tr>
+      <td>{{ trend.name }}</td>
+      <td>{{ trend.type }}</td>
+      <td>{{ trend.steep }}</td>
+      <td>{{ trend.impacts }}</td>
+      <td>{{ trend.indicators }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

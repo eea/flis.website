@@ -1,0 +1,16 @@
+# key is URL
+
+about:
+  title: "About the FLIS Community"
+  subtitle: ""
+  icon: "img/flis-icon-community-bw.png"
+
+horizon:
+  title: "Horizon Scanning"
+  subtitle: ""
+  icon: "img/flis-icon-horizon-bw.png"
+
+terms:
+  title: "FLIS Terms and Definitions"
+  subtitle: "A glossary of main terms in the foresight field, co-created by the FLIS community"
+  icon: "img/flis-icon-terms-bw.png"

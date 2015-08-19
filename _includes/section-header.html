@@ -1,0 +1,24 @@
+{% assign topURL = page.path | split: '/' | first %}
+{% assign section = site.data.sections[topURL] %}
+
+<div class="section-header">
+  <div class="container">
+
+    <div class="thumbnail">
+      <img src="{{ section.icon | prepend: site.baseurl }}" alt="">
+    </div>
+    <div class="body">
+      <h1 class="section-title">
+        <a href="{{ topURL | prepend: site.baseurl }}">
+          {{ section.title }}
+        </a>
+      </h1>
+
+      {% if section.subtitle %}
+      <p class="section-subtitle">
+        {{ section.subtitle }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    {% include head.html %}
+  </head>
+
+  {% if page.scheme %}
+    {% assign scheme = page.scheme %}
+  {% else %}
+    {% assign scheme = "default" %}
+  {% endif %}
+
+  <body class="scheme-{{ scheme }} layout-{{ page.bodyLayout }}">
+
+    {% include header.html %}
+
+    {% if page.noSection != true %}
+      {% include section-header.html %}
+    {% endif %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>

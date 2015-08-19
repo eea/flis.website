@@ -1,0 +1,44 @@
+.layout-sidebar {
+  .page-content {
+    > .container {
+      .clearfix;
+    }
+  }
+  .page-sidebar {
+    float: left;
+    width: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+  }
+  .page-body {
+    .container;
+    overflow: hidden;
+    margin-left: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+
+.sidebar-menu {
+  overflow: auto;
+  margin-bottom: @leading;
+  border-radius: @radius;
+  background-color: @color-soft-fill;
+  ul {
+    margin: @padding-v 0;
+    .no-list();
+  }
+  a {
+    display: block;
+    padding: @padding;
+    color: @color-muted;
+    transition: padding 200ms ease-out;
+    &:hover,
+    &:focus {
+      padding-left: @padding-h-large;
+      color: @color-emphasis;
+    }
+  }
+}

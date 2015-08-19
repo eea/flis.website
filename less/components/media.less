@@ -1,0 +1,21 @@
+.media {
+  img,
+  svg,
+  object,
+  iframe,
+  picture {
+    .img-width();
+  }
+  .caption {
+    margin-top: (@leading / 2);
+    font-style: italic;
+    color: @color-muted;
+  }
+}
+
+article {
+  .media {
+    .center-block();
+    max-width: (@reading-width - 2 * @indent);
+  }
+}

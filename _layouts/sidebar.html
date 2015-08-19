@@ -1,0 +1,34 @@
+---
+layout: base
+---
+
+{% assign topURL = page.path | split: '/' | first %}
+
+<div class="page-content">
+  <div class="container">
+    <aside class="page-sidebar">
+      <nav class="sidebar-menu">
+        <ul>
+        {% for link in site.pages %}
+
+          {% assign linkURL = link.path | split: '/' %}
+
+          {% if linkURL[0] == topURL and linkURL[1] != 'index.html'  %}
+          <li>
+            <a href="{{ link.url | remove: '/index.html' }}"
+               {% if link.url == page.url %}class="is_selected"{% endif %}>
+              {{ link.title }}
+            </a>
+          </li>
+          {% endif %}
+
+        {% endfor %}
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="page-body">
+      {{ content }}
+    </main>
+  </div>
+</div>

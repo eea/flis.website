@@ -1,0 +1,17 @@
+# Site settings
+title: Forward Looking Information Platform
+description: >
+  The FLIS Community is the network of EIONET nominated institutions from the 
+  EEA countries to exchange knowledge and information related to foresight and 
+  forwad looking environmental assessment.
+baseurl: "/"
+assetsurl: "/img/" # The first '/' is the baseurl
+url: "http://flis.pbe.eea.europa.eu"
+
+# Build settings
+markdown: kramdown
+
+# Mr Designer
+exclude:
+  - less/
+  - node_modules/
