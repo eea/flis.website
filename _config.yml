@@ -15,3 +15,5 @@ markdown: kramdown
 exclude:
   - less/
   - node_modules/
+  - README.md
+  - Gruntfile.js
