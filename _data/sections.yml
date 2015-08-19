@@ -14,3 +14,8 @@ terms:
   title: "FLIS Terms and Definitions"
   subtitle: "A glossary of main terms in the foresight field, co-created by the FLIS community"
   icon: "img/flis-icon-terms-bw.png"
+
+policy:
+  title: "Uses of Foresight in Policy Making"
+  subtitle: ""
+  icon: "img/flis-icon-policy-bw.png"

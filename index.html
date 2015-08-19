@@ -35,10 +35,12 @@ noSection: true
           <div class="row">
             <div class="column tablet-6">
               <div class="media">
-                <img src="{{ "flis-icon-policy-color.png" | prepend: site.assetsurl }}">
+                <a href="{{ "policy" | prepend: site.baseurl }}">
+                  <img src="{{ "flis-icon-policy-color.png" | prepend: site.assetsurl }}">
+                </a>
               </div>
               <h5 class="homepage-category-title">
-                <a href="">Uses of Forward Looking Information in Policy Making</a>
+                <a href="{{ "policy" | prepend: site.baseurl }}">Uses of Forward Looking Information in Policy Making</a>
               </h5>
               <p>A database of examples of how foresight was used in strategic policy making.</p>
             </div>
