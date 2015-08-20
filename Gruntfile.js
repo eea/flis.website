@@ -26,8 +26,20 @@ module.exports = function(grunt) {
           nospawn: true
         }
       }
+    },
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('autoprefixer-core')
+        ]
+      },
+      dist: {
+        src: 'css/*.css'
+      }
     }
   });
 
   grunt.registerTask('default', ['less', 'watch']);
+  grunt.registerTask('dist', ['less', 'postcss']);
 };

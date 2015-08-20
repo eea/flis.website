@@ -1,5 +1,5 @@
 ## Build
 
     npm install
-    grunt less
+    grunt dist
     jekyll build
