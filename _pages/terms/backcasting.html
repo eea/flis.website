@@ -1,0 +1,60 @@
+---
+layout: base
+bodyLayout: sidebar
+scheme: yellow
+---
+
+{% assign term = site.data.terms[0] %}
+
+<div class="page-content">
+  <div class="container">
+    <aside class="page-sidebar">
+      <nav class="sidebar-terms">
+        <h6 class="heading">All terms</h6>
+        <ul>
+        {% for term in site.data.terms %}
+          <li>
+            <a href="/terms/backcasting.html">
+              {{ term.name }}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+      </nav>
+    </aside>
+    <main class="page-body">
+      <article class="article-term">
+        <header>
+          <h1>{{ term.name }}</h1>
+        </header>
+
+        <section class="definition">
+          <p>{{ term.definition }}</p>
+        </section>
+
+        {% if term.translations %}
+        <aside class="term-translations">
+          <h6>Translations</h6>
+          <ul class="no-list">
+            {% for translation in term.translations %}
+            <li><a href="">{{ translation }}</a></li>
+            {% endfor %}
+          </ul>
+        </aside>
+        {% endif %}
+
+        {% if term.sources %}
+        <footer>
+          <h6>Sources</h6>
+          <ul>
+            {% for source in term.sources %}
+            <li><a href="">{{ source }}</a></li>
+            {% endfor %}
+          </ul>
+        </footer>
+        {% endif %}
+      </article>
+      
+    </main>
+  </div>
+</div>

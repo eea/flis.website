@@ -1,16 +1,17 @@
 ---
 layout: default
-title: FLIS Terms and Definitions
-subtitle: A glossary of main terms in the foresight field, co-created by the FLIS community
+bodyLayout: default
 scheme: yellow
 ---
 
+
+
 <h1>All Terms</h1>
 
-<ul>
+<ul class="no-list">
   {% for term in site.data.terms %}
   <li>
-    <a href="">{{ term.name }}</a>
+    <a href="{{ "terms/backcasting.html" | prepend: site.baseurl }}">{{ term.name }}</a>
   </li>
   {% endfor %}
 </ul>

@@ -4,6 +4,15 @@
   sources:
     - EEA
     - Environmental terminology and Discovery Service (ETDS)
-  translation:
+  translations:
     - English
     - French
+
+- name: Example
+  definition: > 
+    This is an example Definition
+  sources:
+    - Some institution
+    - Another institution
+  translations:
+    - Language
