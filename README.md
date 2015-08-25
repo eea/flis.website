@@ -1,3 +1,6 @@
+## Prerequisites
+Install nodejs. Install grunt globally `npm install -g grunt grunt-cli`.
+
 ## Build
 
     npm install
