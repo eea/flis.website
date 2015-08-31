@@ -12,18 +12,27 @@
 }
 
 .site-title {
+  overflow: auto;
   float: left;
   margin: 0;
   font-size: 1.25rem;
   font-weight: 500;
-  line-height: 2rem;
+  line-height: 2.4rem;
   color: inherit;
   a {
     display: block;
     color: inherit;
   }
+  img {
+    float: left;
+    margin-right: @padding-h;
+    height: 2.4rem;
+    width: auto;
+    vertical-align: middle;
+  }
   .short-title {
-    display: inline-block;
+    display: none;
+    // display: inline-block;
     margin-right: @padding-h;
     font-weight: 700;
     letter-spacing: .025em;
@@ -42,6 +51,7 @@
   .btn();
   .btn-white();
   float: right;
+  margin-top: (2.4rem - @line-height-rem - @padding-v * 2);
 }
 
 #navmenu {

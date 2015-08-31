@@ -3,10 +3,6 @@
   p {
     max-width: 40rem;
   }
-  .media {
-    .center-block;
-    max-width: 24rem;
-  }
 }
 
 #block-homepage-options {
@@ -32,5 +28,29 @@
 .homepage-category-title {
   @media (min-width: @screen-tablet) {
     min-height: (2em * @line-height-heading);
+  }
+}
+
+#homepage-community {
+  text-align: center;
+  a.media {
+    display: block;
+  }
+  .media {
+    .center-block;
+    max-width: 8rem;
+  }
+}
+
+#homepage-platform {
+  .media {
+    max-width: 24rem;
+    margin-bottom: @leading;
+  }
+  @media (max-width: @screen-phone-max) {
+    text-align: center;
+    .media {
+      .center-block;
+    }
   }
 }
