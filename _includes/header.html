@@ -8,45 +8,14 @@
       </a>
     </h1>
 
-
-
-    <button data-toggle="#navmenu">Menu</button>
-    <nav id="navmenu" class="header-menu">
-      <ul class="nav-list">
+    <button id="navmenu-toggle">Menu</button>
+    <nav id="navmenu">
+      <ul>
         <li><a href="{{ "horizon" | prepend: site.baseurl }}">Horizon Scanning</a></li>
         <li><a href="{{ "policy" | prepend: site.baseurl }}">Uses of Foresight in Policy Making</a></li>
         <li><a href="{{ "terms" | prepend: site.baseurl }}">FLIS Terms and Definitions</a></li>
         <li><a href="{{ "about" | prepend: site.baseurl }}">About the FLIS Community</a></li>
       </ul>
     </nav>
-
-    
-    <button data-toggle="#usermenu">Account</button>
-    <div id="usermenu" class="header-menu">
-      <form action="">
-        <h4>Log in</h4>
-
-        <label for="user-name">Username</label>
-        <input id="user-name" type="text" placeholder="Account">
-        <label for="user-password">Password</label>
-        <input id="user-password" type="password" placeholder="Password">
-
-        <button class="btn btn-green" title="Log in">
-          <span class="icon icon-next"></span>
-        </button>
-
-        <div class="additional">
-          <a href="">Register New Account</a> <br>
-          <a href="">Forgot password?</a>
-        </div>
-      </form>
-
-      <!-- <ul class="nav-list">
-        <li><a href="">Username</a></li>
-        <li><a href="">Administration</a></li>
-        <li><a href="">Log out</a></li>
-      </ul> -->
-    </div>
-
   </div>
 </header>

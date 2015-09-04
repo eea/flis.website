@@ -47,97 +47,39 @@
   }
 }
 
-.site-header [data-toggle] {
-  .btn;
-  .btn-fake;
+#navmenu-toggle {
+  .btn();
+  .btn-white();
   float: right;
   margin-top: (2.4rem - @line-height-rem - @padding-v * 2);
-  margin-left: @padding-h;
-
-  &:focus {
-    outline: none;
-  }
-
-  &:active,
-  &.is_toggled {
-    background-color: @color-soft-fill;
-  }
 }
 
-.header-menu {
+#navmenu {
   &.is_open { display: block; }
   display: none;
   position: absolute;
   top: 100%;
   right: 0;
-  padding: @padding-large;
+  padding: @padding;
   background-color: #fff;
   box-shadow: 0 .1rem .3rem @color-darker;
-
-  .nav-list {
+  ul {
     .no-list();
     margin-bottom: 0;
-    a {
-      display: block;
-      margin-left: -@padding-h-large;
-      margin-right: -@padding-h-large;
-      padding: @padding;
-      &:hover,
-      &:focus {
-        background-color: @color-soft-fill;
-      }
+  }
+  a {
+    display: block;
+    margin-left: -@padding-h;
+    margin-right: -@padding-h;
+    padding: @padding;
+    &:hover,
+    &:focus {
+      background-color: @color-soft-fill;
     }
   }
-
   @media (max-width: @screen-phone) {
     left: 0;
     border-bottom: 2px solid @color-soft;
-  }
-}
-
-#usermenu {
-  left: auto;
-  right: 0;
-  width: 15rem;
-  max-width: 100%;
-  border-bottom: 0;
-  label {
-    display: none;
-  }
-  input {
-    display: block;
-    width: 100%;
-    margin-bottom: @leading;
-    padding: @padding-v-large 0;
-    border: 0;
-    border-bottom: 2px solid @color-soft;
-    transition: border-bottom-color 200ms ease-out;
-    &:hover {
-      border-bottom-color: @color-anchor-hover;
-    }
-    &:focus {
-      outline: none;
-      border-bottom-color: @color-anchor;
-    }
-  }
-
-  .btn {
-    min-width: 4rem;
-    box-shadow: none;
-    text-indent: 0;
-    transition: text-indent 100ms ease-out;
-
-    &:hover,
-    &:focus {
-      text-indent: @padding-h;
-    }
-  }
-
-  .additional {
-    margin: @padding-v-large -@padding-h-large -@padding-v-large;
-    padding: @padding-large;
-    border-top: 1px solid @color-soft;
-    background-color: @color-soft-fill;
   }
 }
 
