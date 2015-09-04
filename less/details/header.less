@@ -49,7 +49,7 @@
 
 #navmenu-toggle {
   .btn();
-  .btn-white();
+  .btn-blue();
   float: right;
   margin-top: (2.4rem - @line-height-rem - @padding-v * 2);
 }
@@ -80,6 +80,18 @@
   @media (max-width: @screen-phone) {
     left: 0;
     border-bottom: 2px solid @color-soft;
+  }
+}
+
+#usermenu {
+  float: right;
+  padding-right: @padding-h;
+  margin-right: @padding-h-large;
+  margin-top: (2.4rem - @line-height-rem - @padding-v * 2);
+  border-right: 1px solid @color-soft;
+  
+  a {
+    &:extend(.btn all, .btn-fake all);
   }
 }
 
