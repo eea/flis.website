@@ -1,0 +1,15 @@
+.has-left-portlets {
+  &:extend(.layout-sidebar);
+
+  #center_content_holder {
+    &:extend(.layout-sidebar .page-content all);
+  }
+
+  .portlet-column-left {
+    &:extend(.layout-sidebar .page-sidebar all);
+  }
+
+  .center-and-right {
+    &:extend(.layout-sidebar .page-body all);
+  }
+}
