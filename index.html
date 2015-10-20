@@ -3,99 +3,41 @@ layout: base
 noSection: true
 ---
 
-<section id="block-homepage-intro" class="block">
+
+<section id="block-categories" class="block">
   <div class="container">
-    <div class="row">
-      
-      <div class="column phone-6">
-        <div id="homepage-platform">
-          <div class="media">
-            <img src="{{ "flis-logo-color.png" alt="FLIS Logo" | prepend: site.assetsurl }}">
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore doloribus a vero repellat cum placeat animi possimus cumque ducimus quisquam?</p>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quisquam temporibus possimus optio, aliquid.</p>
-        </div>
-      </div>
-
-      <div class="column phone-6">
-        <div id="homepage-community">
-          <a class="media" href="">
-            <img src="{{ "flis-icon-community-color.png" | prepend: site.assetsurl }}">
-          </a>
-          <h5><a href="">FLIP Community</a></h5>
-          <p>The FLIP Community is the network of EIONET nominated institutions from the EEA countries to exchange knowledge and information related to foresight and forwad looking environmental assessment.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="block-homepage-options" class="block">
-  <div class="container">
-    <div class="row">
-      <div class="column phone-6">
-        <div class="box box-outline">
-          <h4 class="box-heading">Information Support</h4>
-
-          <div class="row">
-            <div class="column tablet-6">
-              <div class="media">
-                <a href="{{ "policy" | prepend: site.baseurl }}">
-                  <img src="{{ "flis-icon-policy-color.png" | prepend: site.assetsurl }}">
-                </a>
-              </div>
-              <h5 class="homepage-category-title">
-                <a href="{{ "policy" | prepend: site.baseurl }}">Uses of Forward Looking Information in Policy Making</a>
-              </h5>
-              <p>A database of examples of how foresight was used in strategic policy making.</p>
-            </div>
-
-            <div class="column tablet-6">
-              <div class="media">
-                <a href="{{ "horizon" | prepend: site.baseurl }}">
-                  <img src="{{ "flis-icon-horizon-color.png" | prepend: site.assetsurl }}">
-                </a>
-              </div>
-              <h5 class="homepage-category-title">
-                <a href="{{ "horizon" | prepend: site.baseurl }}">Horizon Scanning</a>
-              </h5>
-              <p>What drivers of change are affecting the environment, with their impacts and supporting indicators.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="column phone-6">
-        <div class="box box-outline">
-          <h4 class="box-heading">Methodological Support</h4>
-
-          <div class="row">
-            <div class="column tablet-6">
-              <div class="media">
-                <a href="{{ "terms" | prepend: site.baseurl }}">
-                  <img src="{{ "flis-icon-terms-color.png" | prepend: site.assetsurl }}">
-                </a>
-              </div>
-              <h5 class="homepage-category-title">
-                <a href="{{ "terms" | prepend: site.baseurl }}">FLIS terms and definitions</a>
-              </h5>
-              <p>A glossary of main terms in the foresight field, co-created by the FLIS community.</p>
-            </div>
-
-            <div class="column tablet-6">
-              <div class="media">
-                <img src="{{ "flis-icon-methods-color.png" | prepend: site.assetsurl }}">
-              </div>
-              <h5 class="homepage-category-title">
-                <a href="">Methods and Methodologies</a>
-              </h5>
-              <p>Foresight methodologies and how to best combine them.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <h1>Forward Looking Information Platform</h1>
+  <ul class="list-categories">
+    <li>
+      <a href="">
+        <div class="category-icon"><img src="{{ "flis-icon-community-color.png" | prepend: site.assetsurl }}"></div>
+        <h2 class="category-name">FLIP Community</h2>
+      </a>
+    </li>
+    <li>
+      <a href="{{ "policy" | prepend: site.baseurl }}">
+        <div class="category-icon"><img src="{{ "flis-icon-policy-color.png" | prepend: site.assetsurl }}"></div>
+        <h2 class="category-name">Uses of Forward Looking Information in Policy Making</h2>
+      </a>
+    </li>
+    <li>
+      <a href="{{ "horizon" | prepend: site.baseurl }}">
+        <div class="category-icon"><img src="{{ "flis-icon-horizon-color.png" | prepend: site.assetsurl }}"></div>
+        <h2 class="category-name">Horizon Scanning</h2>
+      </a>
+    </li>
+    <li>
+      <a href="{{ "terms" | prepend: site.baseurl }}">
+        <div class="category-icon"><img src="{{ "flis-icon-terms-color.png" | prepend: site.assetsurl }}"></div>
+        <h2 class="category-name">FLIS terms and definitions</h2>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <div class="category-icon"><img src="{{ "flis-icon-methods-color.png" | prepend: site.assetsurl }}"></div>
+        <h2 class="category-name">Methods and Methodologies</h2>
+      </a>
+    </li>
+  </ul>
   </div>
 </section>
