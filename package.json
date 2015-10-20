@@ -1,16 +1,18 @@
 {
   "name": "FLIS",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "The FLIS Community is the network of EIONET nominated institutions from the EEA countries to exchange knowledge and information related to foresight and forwad looking environmental assessment.",
   "main": "index.html",
-  "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
+  "dependencies": {
+    "autoprefixer": "^6.0.3",
+    "cssnano": "^3.3.1",
     "grunt": "^0.4.5",
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-postcss": "^0.5.5",
+    "grunt-postcss": "^0.6.0",
     "jit-grunt": "^0.9.1",
-    "normalize.css": "^3.0.3"
+    "normalize.css": "^3.0.3",
+    "pixrem": "^3.0.0"
   },
   "repository": {
     "type": "git",

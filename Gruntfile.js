@@ -3,15 +3,26 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     less: {
+      options: {
+        compress: false,
+        yuicompress: true,
+        optimization: 2,
+      },
       development: {
         options: {
-          compress: false,
-          yuicompress: true,
-          optimization: 2,
           sourceMap: true,
-          sourceMapFilename: "css/main.css.map",
-          sourceMapBasepath: "css/",
-          sourceMapURL: "main.css.map"
+          sourceMapFileInline: true
+          // sourceMapFilename: "css/main.css.map",
+          // sourceMapBasepath: "css/",
+          // sourceMapURL: "main.css.map"
+        },
+        files: {
+          "css/main.css": "less/main.less"
+        }
+      },
+      production: {
+        options: {
+          sourceMap: false
         },
         files: {
           "css/main.css": "less/main.less"
@@ -21,7 +32,7 @@ module.exports = function(grunt) {
     watch: {
       styles: {
         files: ['less/**/*.less'], // which files to watch
-        tasks: ['less'],
+        tasks: ['less:development'],
         options: {
           nospawn: true
         }
@@ -31,7 +42,14 @@ module.exports = function(grunt) {
       options: {
         map: false,
         processors: [
-          require('autoprefixer-core')
+          require('autoprefixer'),
+          require('pixrem'),
+          require('cssnano')({
+            'safe': true,
+            'sourcemap': false,
+            'autoprefixer': false,
+            'postcss-convert-values': false
+          })
         ]
       },
       dist: {
@@ -40,6 +58,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['less', 'watch']);
-  grunt.registerTask('dist', ['less', 'postcss']);
+  grunt.registerTask('default', ['less:development', 'watch']);
+  grunt.registerTask('dist', ['less:production', 'postcss']);
 };
