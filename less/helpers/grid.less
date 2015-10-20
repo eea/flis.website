@@ -1,3 +1,10 @@
+.outset-inset(@x) {
+  padding-left: @x;
+  padding-right: @x;
+  margin-left: -@x;
+  margin-right: -@x;
+}
+
 .row(@gutter: @grid-gutter) {
   .clearfix();
   margin-left: (-@gutter / 2);
