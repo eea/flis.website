@@ -1,4 +1,5 @@
 #block-categories {
+  margin-bottom: (@leading * 2);
   text-align: center;
   color: #fff;
   background-color: #222;
@@ -7,7 +8,6 @@
   h1 {
     color: inherit;
   }
-  
 }
 
 
@@ -118,8 +118,50 @@
   }
 }
 
+.homepage-latest-news {
+  .center-block;
+  max-width: 40rem;
+  margin-bottom: (@leading * 2);
+  h2 {
+    font-weight: 400;
+    color: @color-muted;
+    text-align: center;
+  }
+  ul {
+    .no-list;
+    border-top: 1px solid @color-soft;
+    border-bottom: 1px solid @color-soft;
+    li {
+      padding: 1.5rem 0;
+      border-bottom: 1px dashed @color-soft;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    h3 {
+      margin-bottom: (@leading / 2);
+      &:hover {
+        color: @color-anchor-hover;
+      }
+    }
+    p {
+      margin-bottom: (@leading / 2);
+      font-size: larger;
+    }
+    a {
+      display: block;
+    }
+    .postedon {
+      float: right;
+      margin-left: 0;
+      color: @color-muted;
 
-
-
-
-
+    }
+  }
+  .more {
+    &:extend(.btn all, .btn-white all);
+    .center-block;
+    display: block;
+    max-width: 10rem;
+  }
+}
