@@ -22,7 +22,10 @@ module.exports = function(grunt) {
       },
       production: {
         options: {
-          sourceMap: false
+          sourceMap: false,
+          modifyVars: {
+            "font-path": "''"
+          }
         },
         files: {
           "css/main.css": "less/main.less"
