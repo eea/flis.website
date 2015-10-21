@@ -2,8 +2,11 @@ $(document).ready(function() {
 
   // DataTables init
   var dataTableSettings = {
-    "dom": "ftip"
-  }
+    "dom": "ftip",
+    "oLanguage": {
+      "sSearch": "Search"
+    }
+  };
 
   $(".dataTable").DataTable( dataTableSettings );
 

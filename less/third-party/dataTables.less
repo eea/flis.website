@@ -1,12 +1,123 @@
 .dataTables_wrapper {
-  th, td {
-    padding: @padding;
+  .clearfix;
+  border: 1px solid @color-soft;
+  border-radius: @radius;
+  box-shadow: 0 .1rem .3rem fade(#000, 20%);
+}
+
+.dataTable {
+  width: 100%;
+  &.no-footer {
+    border-bottom: 2px solid @color-soft;
   }
+
+  th, td {
+    padding: @padding-large;
+  }
+
+  th {
+    cursor: pointer;
+      &:before {
+        .icon;
+        content: '';
+        font-size: 1.3em;
+        line-height: 1;
+        float: right;
+        color: @color-muted;
+      }
+      &:hover:before {
+        content: @icon-expand;
+      }
+    &.sorting_asc {
+      background-color: @color-soft-fill;
+      &:before {
+        content: @icon-expand;
+      }
+      &:hover:before {
+        content: @icon-collapse;
+      }
+    }
+    &.sorting_desc {
+      background-color: @color-soft-fill;
+      &:before {
+        content: @icon-collapse;
+      }
+      &:hover:before {
+        content: @icon-expand;
+      }
+    }
+  }  
+
+  td {
+    &.sorting_1,
+    &.sorting_2,
+    &.sorting_3 {
+      background-color: @color-soft-fill;
+    }
+  }
+
   thead {
     th {
       text-align: left;
+      border-bottom: 1px solid @color-soft;
     }
   }
-  .dataTables_filter {
+}
+
+.dataTables_filter {
+  margin-left: auto;
+  margin-right: 0;
+  padding: (@padding-v-large + @padding-v) @padding-h-large;
+  border-bottom: 2px solid @color-soft;
+  label {
+    cursor: pointer;
+    &:after {
+      .icon;
+      content: @icon-search;
+      font-size: 1.3em;
+      line-height: 1;
+      color: @color-muted;
+    }
+  }
+  input {
+    margin: 0 @padding-h;
+    border: 1px solid @color-soft;
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: @color-hard;
+    }
   }
 }
+
+.dataTables_info,
+.dataTables_paginate {
+  padding: @padding-large;
+}
+
+.dataTables_info {
+  padding-top: (@padding-v-large + @padding-v);
+  padding-bottom: (@padding-v-large + @padding-v);
+  float: left;
+}
+
+.dataTables_paginate {
+  float: right;
+}
+
+.paginate_button {
+  &:extend(.btn all, .btn-fake all);
+  cursor: pointer;
+  &.current {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: default;
+      background-color: @color-soft-fill;
+      border-color: @color-soft;
+      color: @color-emphasis;
+    }
+  }
+}
+

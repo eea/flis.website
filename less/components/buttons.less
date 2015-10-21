@@ -60,8 +60,10 @@
   &[disabled] {
     &,
     &:hover,
-    &:focus {
-      opacity: .5;
+    &:focus,
+    &:active {
+      cursor: default;
+      color: @color-muted;
     }
   }
 }
