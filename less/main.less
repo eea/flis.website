@@ -1,5 +1,5 @@
 // Init
-@import (less) "../node_modules/normalize.css/normalize.css";
+@import (less) "@{path-node_modules}/normalize.css/normalize.css";
 @import "settings.less";
 
 // Helpers
@@ -27,6 +27,8 @@
 
 // Third-Party Components
 @import "third-party/dataTables.less";
+@import (reference) "@{path-node_modules}/bootstrap/less/tables.less";
+@import (reference) "@{path-node_modules}/bootstrap/less/mixins/table-row.less";
 
 // Shame(less)
 @import "shame.less";

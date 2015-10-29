@@ -1,3 +1,7 @@
+// Paths
+@path-fonts:                 "../fonts";
+@path-node_modules:          "../node_modules";
+
 // Media query breakpoints
 @screen-phone:               640px;
 @screen-tablet:              1024px;
@@ -93,7 +97,6 @@
 
 // Typography
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic&subset=latin,latin-ext);
-@font-path:                  "../fonts/";
 @font-family-sans-serif:     "Roboto", sans-serif;
 @font-family-serif:          serif;
 @font-family-monospace:      monospace;
@@ -135,3 +138,43 @@
 
 // Buttons
 @btn-font-weight:            normal;
+
+
+// Tables from Bootstrap
+//** Padding for `<th>`s and `<td>`s.
+@table-cell-padding:            @padding-h;
+//** Padding for cells in `.table-condensed`.
+@table-condensed-cell-padding:  @padding-h-small;
+
+//** Default background color used for all tables.
+@table-bg:                      transparent;
+//** Background color used for `.table-striped`.
+@table-bg-accent:               @color-soft-fill;
+//** Background color used for `.table-hover`.
+@table-bg-hover:                @color-soft-fill;
+@table-bg-active:               @table-bg-hover;
+
+//** Border color for table and cell borders.
+@table-border-color:            @color-soft;
+
+@line-height-computed:          @leading;
+@text-muted:                    @color-muted;
+@line-height-base:              @line-height-body;
+@body-bg:                       transparent;
+@screen-xs-max:                 @screen-phone-max;
+
+@state-success-text:             #3c763d;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                #31708f;
+@state-info-bg:                  #d9edf7;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+
+@state-warning-text:             #8a6d3b;
+@state-warning-bg:               #fcf8e3;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text:              #a94442;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);

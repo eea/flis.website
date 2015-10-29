@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         options: {
           sourceMap: false,
           modifyVars: {
-            "font-path": "''"
+            "path-fonts": "''"
           }
         },
         files: {
