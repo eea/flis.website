@@ -1,0 +1,267 @@
+---
+layout: default
+noSection: true
+---
+
+<h1>Free text search in this portal</h1>
+<div class="searchQuery">
+  <div class="searchQueryFilters">
+    <h2><strong>Search filters</strong></h2>
+    <form method="get" name="frmSearch" action="search_html">
+      <label for="query">Enter your search term(s):</label>
+      <input type="text" name="query:utf8:ustring" id="query" size="40" maxlength="100" value="a">
+      <div style="margin-top:1em;">
+        <label for="releasedate">Published:</label>
+        <select name="releasedate_range" id="releasedate_range" style="vertical-align:middle;">
+          <option value="max">before</option>
+          <option value="min" selected="selected">after</option>
+        </select>
+        <input type="text" name="releasedate" class="vDateField" id="releasedate" size="10" value=""><span>&nbsp;<a href="javascript:DateTimeShortcuts.handleCalendarQuickLink(0, 0);">Today</a>&nbsp;|&nbsp;<a id="calendarlink0" href="javascript:DateTimeShortcuts.openCalendar(0);"><img src="misc_/Naaya/icon_calendar.gif" alt="Calendar"></a></span>
+        <noscript>&lt;em&gt;(dd/mm/yyyy)&lt;/em&gt;</noscript>
+      </div>
+      <div style="margin-top:1em;">
+        <label for="meta_types">Content type(s):</label>
+        <br>
+        <input type="checkbox" checked="checked" class="toggle-all" id="toggle-all" rel="content-types">
+        <label for="toggle-all">All types</label>
+        <br>
+        <ul style="list-style-type:none;" id="meta_types">
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_News" name="Naaya_News">
+            <label for="Naaya_News">News</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_Story" name="Naaya_Story">
+            <label for="Naaya_Story">Story</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_Document" name="Naaya_Document">
+            <label for="Naaya_Document">HTML Document</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_Pointer" name="Naaya_Pointer">
+            <label for="Naaya_Pointer">Pointer</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_URL" name="Naaya_URL">
+            <label for="Naaya_URL">URL</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_Event" name="Naaya_Event">
+            <label for="Naaya_Event">Event</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_Folder" name="Naaya_Folder">
+            <label for="Naaya_Folder">Folder</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_Media_File" name="Naaya_Media_File">
+            <label for="Naaya_Media_File">Media File</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_Youtube" name="Naaya_Youtube">
+            <label for="Naaya_Youtube">YouTube Video</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_Blob_File" name="Naaya_Blob_File">
+            <label for="Naaya_Blob_File">File</label>
+          </li>
+          <li>
+            <input type="checkbox" style="margin:0 3px;" class="content-types" checked="checked" id="Naaya_Contact" name="Naaya_Contact">
+            <label for="Naaya_Contact">Contact</label>
+          </li>
+        </ul>
+      </div>
+      <br clear="all">
+      <input type="submit" value="Search" class="styled_button">
+      <input type="hidden" name="sort_order" value="">
+      <input type="hidden" name="sort_by" value="">
+    </form>
+  </div>
+  <h2 style="padding-left: 0.5em; margin-bottom: 1em;">
+        <strong>Search Results:</strong></h2>
+  <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+    <div class="dataTables_length" id="DataTables_Table_0_length">
+      <label>Show
+        <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="-1">All</option>
+        </select> entries</label>
+    </div>
+    <div id="DataTables_Table_0_filter" class="dataTables_filter">
+      <label>Live filter results:
+        <input type="search" class="" placeholder="" aria-controls="DataTables_Table_0">
+      </label>
+    </div>
+    <table class="sortable dataTable test no-footer" border="0" width="100%" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info" style="width: 100%;">
+      <thead>
+        <tr role="row">
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Type: activate to sort column ascending">Type</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Title/Abstract: activate to sort column ascending" style="width: 522px;">Title/Abstract</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Last updated: activate to sort column ascending" style="width: 55px;">Last updated</th>
+          <th class="sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="descending" aria-label="Upload date (for files): activate to sort column ascending" style="width: 48px;">Upload date (for files)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row" class="odd">
+          <td>
+            <img style="text-align: middle" src="++resource++naaya.mime_icons/docx.png" alt="DOCX" title="DOCX">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/usflip/added-value/nrc-flis-one-pager-2013-12-03.docx">FLIS: a resource to help deal with challenges for environmental policy</a>
+            <span>
+              <br>
+              Environmental policymakers face serious challenges
+Policymakers working on environmental issues face serious and often competing challenges such as: limiting climate change and its impacts; halting th..</span>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">02 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">02 Nov 2015</td>
+        </tr>
+        <tr role="row" class="even">
+          <td>
+            <img style="text-align: middle" src="++resource++naaya.mime_icons/pdf.png" alt="PDF" title="PDF">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/about/what-we-do/added-value/nrc-flis-a-network-that-works.pdf">NRC FLIS:  a network that works!</a>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">02 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">02 Nov 2015</td>
+        </tr>
+        <tr role="row" class="odd">
+          <td>
+            <img style="text-align: middle" src="++resource++naaya.mime_icons/docx.png" alt="DOCX" title="DOCX">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/about/how-we-work/nrc-flis-one-pager-2013-12-03.docx">NRC FLIS as  a resource</a>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">02 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">02 Nov 2015</td>
+        </tr>
+        <tr role="row" class="even">
+          <td>
+            <img style="text-align: middle" src="misc_/Naaya/NyFolder.png" alt="Folder" title="Folder">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/about">FLIS Community</a>
+            <span>
+              <br>
+              The FLIS Community is a network of EIONET-nominated institutions from the EEA member countries, designed for the exchange of knowledge and information related to foresight and forward-looking environm..</span>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">03 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">-</td>
+        </tr>
+        <tr role="row" class="odd">
+          <td>
+            <img style="text-align: middle" src="misc_/Naaya/document.gif" alt="HTML Document" title="HTML Document">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/reports/future-water-availability-western-balkan-region/summary-1">Summary</a>
+            <span>
+              <br>
+              The&nbsp;Security implications of future water use in Western Balkans: the challenge of hydropower development&nbsp;report seeks to encourage discussion and action in Western Balkans by providing an explorative..</span>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">03 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">-</td>
+        </tr>
+        <tr role="row" class="even">
+          <td>
+            <img style="text-align: middle" src="misc_/Naaya/NyFolder.png" alt="Folder" title="Folder">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/reports/future-water-availability-western-balkan-region">Future water availability in Western Balkan region</a>
+            <span>
+              <br>
+              This report was prepared by the European Environment Agency (EEA) and its European Topic
+Centre on Inland, Coastal and Marine Waters (ETC/ICM). The Thematic Center for Water Research, Studies and Proj..</span>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">03 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">-</td>
+        </tr>
+        <tr role="row" class="odd">
+          <td>
+            <img style="text-align: middle" src="misc_/Naaya/url.gif" alt="URL" title="URL">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/about/other-partners/european-political-strategy-centre-epsc">European Political Strategy Centre (EPSC)</a>
+            <span>
+              <br>
+              Strategic analysis, policy advice and outreach
+The European Political Strategy Centre (EPSC) reports directly to the President and operates under his authority. It is composed of a professional staff ..</span>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">29 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">-</td>
+        </tr>
+        <tr role="row" class="even">
+          <td>
+            <img style="text-align: middle" src="misc_/Naaya/url.gif" alt="URL" title="URL">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/about/other-partners/oecd-technology-foresight-fora">OECD Technology Foresight Fora</a>
+            <span>
+              <br>
+              Technology Foresight Forums are organised by the OECD Committee for Digital Economy Policy (formerly Committee for Information, Computer and Communications Policy) to help identify opportunities and c..</span>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">05 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">-</td>
+        </tr>
+        <tr role="row" class="odd">
+          <td>
+            <img style="text-align: middle" src="misc_/Naaya/url.gif" alt="URL" title="URL">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/about/other-partners/growth-in-transition">Growth in Transition</a>
+            <span>
+              <br>
+              Just now – in the light of the current financial and economic crisis and intensive efforts for achieving economic growth – the question emerges which kind of growth we want for the future and which go..</span>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">05 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">-</td>
+        </tr>
+        <tr role="row" class="even">
+          <td>
+            <img style="text-align: middle" src="misc_/Naaya/NyFolder.png" alt="Folder" title="Folder">
+          </td>
+          <td>
+            <a href="http://flis.pbe.eea.europa.eu/usflip/assessments/key-messages">Key Messages</a>
+            <span>
+              <br>
+              Report from Switzerland
+•In future all outlook activities done within the Swiss federal administration could be catalogued and formally documented (if not yet the case) so that these may easily be ide..</span>
+          </td>
+          <td style="text-align:right" title="Older than 12 months">02 Nov 2015</td>
+          <td style="text-align: center" class="sorting_1">-</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 10 of 17 entries</div>
+    <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_0_paginate"><a class="paginate_button first disabled" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" id="DataTables_Table_0_first">First</a><a class="paginate_button previous disabled" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" id="DataTables_Table_0_previous">Previous</a><span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">1</a><a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0">2</a></span><a class="paginate_button next" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0" id="DataTables_Table_0_next">Next</a><a class="paginate_button last" aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0" id="DataTables_Table_0_last">Last</a></div>
+  </div>
+</div>
+<div class="tooltip">
+  <strong>Search tips</strong>
+  <table>
+    <tbody>
+      <tr>
+        <td valign="top" class="tip_item">fish <strong>AND</strong> biodiversity</td>
+        <td valign="top">the two words occur in the document in any order but not necessarily together</td>
+      </tr>
+      <tr>
+        <td valign="top" class="tip_item">fish <strong>OR</strong> biodiversity</td>
+        <td valign="top">either of the words occur in the document</td>
+      </tr>
+      <tr>
+        <td valign="top" class="tip_item">fish and <strong>NOT</strong> biodiversity</td>
+        <td valign="top">the word fish and not the word biodiversity occur</td>
+      </tr>
+      <tr>
+        <td valign="top" class="tip_item">
+          bio<strong>*</strong></td>
+        <td valign="top">everything starting with <em>bio</em></td>
+      </tr>
+    </tbody>
+  </table>
+  <span>This search is performed on the current website.</span>
+</div>
+<br clear="all">
